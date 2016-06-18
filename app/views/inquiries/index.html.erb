@@ -8,20 +8,25 @@
 <%= form_for @inquiry, :url => confirm_path do |f| %>
 <table>
     <tr>
-<th><%= f.label :name %></th>
-<td><%= f.text_field :name %></td>
+        <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: "form-control" %>
+         </div>
     </tr>
     <tr>
-<th><%= f.label :email %></th>
-<td><%= f.text_field :email %></td>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
     </tr>
     <tr>
-<th><%= f.label :content %></th>
-<td><%= f.text_area :content %></td>
-</tr>
-<tr>
-    <td></td>
-<td><%= f.submit "確認" %></td>
-</tr>
+        <div class="form-group">
+            <%= f.label "内容" %>
+            <%= f.text_area :content, class: "form-control" %>
+        </div>
+    </tr>
+    <tr>
+        <td><%= f.submit "確認", class: "btn btn-primary btn-lg" %></td>
+    </tr>
 </table>
 <% end %>
