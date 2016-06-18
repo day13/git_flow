@@ -1,0 +1,13 @@
+<%= form_for @inquiry, :url => thanks_path do |f| %>
+<%= f.label :name %>
+<%= f.hidden_field :name %>
+<%= @inquiry.name %><br>
+<%= f.label :email %>
+<%= f.hidden_field :email %>
+<%= @inquiry.email %><br>
+<%= f.label :content %>
+<%= f.hidden_field :content %>
+<%= @inquiry.content %><br>
+<%= f.submit "送信" %>
+<%= f.submit "戻る", name: "back" %>
+<% end %>

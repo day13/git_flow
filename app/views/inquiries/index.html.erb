@@ -1,0 +1,20 @@
+<%= form_for @inquiry, :url => confirm_path do |f| %>
+<table>
+    <tr>
+<th><%= f.label :name %></th>
+<td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+<th><%= f.label :email %></th>
+<td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+<th><%= f.label :content %></th>
+<td><%= f.text_area :content %></td>
+</tr>
+<tr>
+    <td></td>
+<td><%= f.submit "確認" %></td>
+</tr>
+</table>
+<% end %>
