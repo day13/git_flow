@@ -1,3 +1,10 @@
+<% if @inquiry.errors.any? %>
+<%= @inquiry.errors.count %>個のエラーがあります。<br />
+<% @inquiry.errors.full_messages.each do |msg| %>
+<%= msg %><br />
+<% end %>
+<% end %>
+
 <%= form_for @inquiry, :url => confirm_path do |f| %>
 <table>
     <tr>
