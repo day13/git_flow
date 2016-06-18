@@ -4,8 +4,11 @@ class InquiriesController < ApplicationController
     end
     def confirm
         @inquiry = Inquiry.new(inquiry_params)
-        @inquiry.valid?
-        render :action => "confirm"
+        if @inquiry.valid?
+           render :action => "confirm"
+       else
+           render :action => "index"
+        end
     end
 def thanks
         @inquiry = Inquiry.new(inquiry_params)
